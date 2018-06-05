@@ -1,8 +1,3 @@
-# fomo-superfilter
-Filters the shit out of the shitcoins. Proper.
-
-### EXAMPLE
-'''python
 from fomo_superfilter.interface import BinanceDataFrameCreator
 from fomo_superfilter.interface import BittrexDataFrameCreator
 from fomo_superfilter.superfilter import SuperFilter
@@ -18,4 +13,3 @@ bittrex_btc = bittrex_data['BTC']
 bittrex_filtered = SuperFilter.filter(bittrex_btc)
 
 print(bittrex_filtered)
-'''python
