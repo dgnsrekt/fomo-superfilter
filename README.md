@@ -18,4 +18,4 @@ bittrex_btc = bittrex_data['BTC']
 bittrex_filtered = SuperFilter.filter(bittrex_btc)
 
 print(bittrex_filtered)
-'''python
+'''
