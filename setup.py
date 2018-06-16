@@ -11,7 +11,7 @@ tests_require = ['pytest', 'pytest-watch']
 
 setup(
     name='fomo-superfilter',
-    version='0.0.1',
+    version='0.0.2',
     description='Filters the shit out of shitcoins.',
     long_description=long_description,
     author='run2dev',
@@ -19,6 +19,7 @@ setup(
     url='https://github.com/run2dev',
     packages=find_packages(),
     install_requires=install_requires,
+    python_requires='python>=3.6',
     tests_require=tests_require,
     # cmdclass = {'test': PyTest},
     include_package_data=True,
