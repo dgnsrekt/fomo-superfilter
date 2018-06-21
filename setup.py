@@ -6,12 +6,12 @@ import sys
 from setuptools import setup, find_packages
 
 long_description = ''  # TODO: add
-install_requires = ['ccxt', 'pandas', 'structlog']
+install_requires = ['ccxt', 'pandas', 'structlog', 'tenacity']
 tests_require = ['pytest', 'pytest-watch']
 
 setup(
     name='fomo-superfilter',
-    version='0.0.4',
+    version='0.0.5',
     description='Filters the shit out of shitcoins.',
     long_description=long_description,
     author='run2dev',

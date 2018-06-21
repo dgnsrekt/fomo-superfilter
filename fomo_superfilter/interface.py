@@ -3,6 +3,7 @@ import pandas as pd
 
 from ccxt.base.errors import RequestTimeout
 from structlog import get_logger as logger
+from tenacity import retry, retry_if_exception_type, stop_after_attempt
 
 
 class ExchangeInterface:
@@ -18,6 +19,7 @@ class ExchangeInterface:
     def connect(cls,  exchange):
         return getattr(ccxt, exchange)({'enableRateLimit': True})
 
+    @retry(retry=retry_if_exception_type(ccxt.NetworkError), stop=stop_after_attempt(5))
     def pull_tickers(self):
         self._log.debug('Fetching tickers', exchange=self.id)
         tickers = self.exchange.fetchTickers()
